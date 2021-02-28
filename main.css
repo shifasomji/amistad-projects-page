@@ -1,0 +1,152 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto';
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+} 
+ 
+.citation-box {
+    padding: 1em; 
+    border: solid 1px #999;
+    padding-bottom: 0;
+    clear: both;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 3em;
+}
+
+.bottom-nav {
+    margin-top: 2em;
+    letter-spacing: 1.5px;
+}
+
+.bottom-nav a {
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+    color:#263446;
+    text-decoration: none;
+}
+
+.pub-year, .pub-year-spacer {
+    float: left;
+    width: 3em;
+    text-align: left;
+}
+
+.citation-pdf {
+    display: block;
+    float: right;
+}    
+
+.citation-pdf a {
+    font-weight: 600;
+    text-decoration: none;
+    color: #343434;
+}
+
+p, a, ul {        
+    font-size: 11pt;
+}
+
+p {
+    text-indent: 0px;
+}
+
+a {
+    color: #266294;
+    font-style: normal;
+    font-size: 11pt;  
+}
+
+a:hover,
+a:focus {
+    color:#B9C6CA;
+}
+
+h1 {
+    font-size: 2em;
+    margin-top: 2em;
+}
+
+h1.hi {
+    font-size: 3em;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+h3 {
+    font-size: 1em;
+}
+
+.publications-box {
+    width: 85%;
+    max-width: 1280px;
+}
+
+.publications-box p {
+    padding-top: 0.25em;
+}
+
+.main-page-box {
+    width: 85%;
+    max-width: 970px;
+}
+
+.me-image {
+    width: 100%;
+    max-width: 900px;
+    /* margin-left: -30px; */
+}
+
+.team-image {
+    width: 100%;
+    max-width: 956px;
+    /* margin-left: -30px; */
+}
+
+.grad-image {
+    width: 100%;
+    max-width: 956px;        
+}
+
+.image-wrapper {
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    margin-top: 6.5em; 
+    margin-bottom: 4em;         
+    width: 100%;
+    /*background-color: #C6D4E6;
+    background-image: linear-gradient(to left,#263446, #EFDFC8);
+    border-style: solid;
+    border-color: black black black #162436;
+    border-width: 0px 0px 0px 30px;*/
+}
+
+blockquote {
+    font-style: italic;
+    text-align: left;
+    padding-left: 50%;
+    margin-left: -25%;
+    width: 100%;
+}
+
+ul {
+    text-align: left;
+    width: 100%;
+    padding-left: 50%;
+    margin-left: -25%;
+    margin-top: -2em;
+}
+
+.media-icon {
+    height: 18px; 
+    width: 18px; 
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    margin-right: 0.5em;
+}

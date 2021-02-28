@@ -1,0 +1,9 @@
+:root {
+    --ami-orange: #fd4e09;
+}
+
+#projects-title {
+    font-family: helvetica, sans-serif;
+    font-size: 72px;
+    color: var(--ami-orange);
+}
