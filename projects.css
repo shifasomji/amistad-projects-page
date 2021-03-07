@@ -2,8 +2,84 @@
     --ami-orange: #fd4e09;
 }
 
+/* he had this in the original file idk */
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 #projects-title {
     font-family: helvetica, sans-serif;
     font-size: 72px;
     color: var(--ami-orange);
+    margin: 1em;
+}
+
+.project-box {
+    width: 100%;
+    height: 500px; /* do we want a fixed size, page relative size, or a content relative size (like match image/video)? */
+    border: 1px solid black; /* border like in drawing or box-shadow like with people photos */
+    margin-bottom: 50px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.project-media {
+    width: 50%;
+    height: 100%;
+
+    object-fit: cover;
+    border-right: 1px solid black;
+}
+
+.project-content {
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+    font-family: helvetica, sans-serif;
+}
+
+.read-more {
+    margin: 25px;
+    margin-top: auto;
+    text-align: right;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    color: black;
+    transition: color 0.2s;
+}
+
+.read-more:hover {
+    cursor: pointer;
+    color: var(--ami-orange);
+}
+
+/* resizing for small width screens */
+@media only screen and (max-width: 650px) {
+    .project-box {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .project-media {
+        width: 100%;
+        height: 300px;
+        border-right: none;
+        border-bottom: 1px solid black;
+    }
+
+    .project-content {
+        width: 100%;
+        min-height: 200px; /* keeping ideal 500px, but allowing room for more */
+    }
 }
