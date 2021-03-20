@@ -20,12 +20,13 @@ html {
 
 .project-box {
     width: 100%;
-    height: 500px; /* do we want a fixed size, page relative size, or a content relative size (like match image/video)? */
+    height: 350px; /* do we want a fixed size, page relative size, or a content relative size (like match image/video)? */
     border: 1px solid black; /* border like in drawing or box-shadow like with people photos */
     margin-bottom: 50px;
 
     display: flex;
     flex-direction: row;
+    overflow: hidden;
 }
 
 .project-media {
@@ -45,6 +46,10 @@ html {
     align-content: center;
 
     font-family: helvetica, sans-serif;
+}
+
+.project-content > p {
+    font-size: 18px;
 }
 
 .read-more {
@@ -73,13 +78,26 @@ html {
 
     .project-media {
         width: 100%;
-        height: 300px;
+        height: 200px;
         border-right: none;
         border-bottom: 1px solid black;
     }
 
     .project-content {
         width: 100%;
-        min-height: 200px; /* keeping ideal 500px, but allowing room for more */
+        min-height: 150px; /* keeping ideal 500px, but allowing room for more */
     }
+
+    .project-content > h1 {
+        margin: 15px;
+    }
+
+    .project-content > p {
+        margin: 5px;
+    }
+
+    .read-more {
+        margin: 15px;
+    }
+
 }
