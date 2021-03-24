@@ -1,0 +1,135 @@
+:root {
+    --ami-orange: #fd4e09;
+}
+
+#projects-title {
+    font-family: helvetica, sans-serif;
+    font-size: 72px;
+    color: var(--ami-orange);
+    margin: 1em;
+}
+
+.panel {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.panel .media {
+    background: transparent url('loading.gif') center no-repeat;
+    position: relative;
+
+    height: 100%;
+    width: 50%;
+    min-width: 50%;
+
+    object-fit: cover;
+    object-position: 50% 21%; /* default position */
+}
+
+.panel .text {
+    font-family: helvetica, sans-serif;
+    margin: 50px;
+    height: 350px;
+    overflow: hidden;
+}
+
+.panel .text:after {
+    content: "";
+    box-shadow: 0px -50px 30px -10px white inset;
+    position:absolute;
+    bottom: 100px;
+    right:0;
+    width:50%;
+    height:50px;
+    overflow: hidden;
+}
+
+.reversed .text:after {
+    right: auto;
+    left: 0;
+}
+
+.panel .text > h1 {
+    font-size: max(min(52px, 3vw), 32px);
+    margin: 0;
+}
+.panel .text > p {
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 20px;
+}
+
+.read-more {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    color: black;
+    text-decoration: underline;
+    text-decoration-color: black;
+    text-decoration-thickness: 0.2em;
+    transition: color 0.2s, text-decoration-color 0.2s;
+}
+
+.read-more:hover {
+    cursor: pointer;
+    color: var(--ami-orange);
+    text-decoration-color: var(--ami-orange);
+}
+
+.reversed {
+    flex-direction: row-reverse;
+}
+.reversed .text > h1 {
+    text-align: right;
+}
+.reversed .read-more {
+    left: 50px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .panel {
+        flex-direction: column;
+        height: auto;
+    }
+    .panel .text {
+        height: auto;
+    }
+    .panel .media {
+        width: 100%;
+        min-width: 100%;
+        height: 250px;
+    }
+    .reversed .text > h1 {
+        text-align: left;
+    }
+    .reversed .read-more {
+        left: auto;
+        right: 50px;
+    }
+    .read-more {
+        font-size: 16px;
+    }
+    .panel .text > p {
+        font-size: 16px;
+    }
+    .panel .text:after {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    #projects-title {
+        font-size: 15vw
+    }
+}
