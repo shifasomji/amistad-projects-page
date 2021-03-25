@@ -56,9 +56,10 @@
 }
 
 .panel .text > h1 {
-    font-size: max(min(52px, 3vw), 32px);
+    font-size: 52px;
     margin: 0;
 }
+
 .panel .text > p {
     text-align: justify;
     text-justify: inter-word;
@@ -96,7 +97,20 @@
     left: 50px;
 }
 
+/* using instead of min/max/clamp bc only supported on chrome */
+@media only screen and (max-width: 1700px) {
+    .panel .text > h1 {
+        font-size: 3vw;
+    }
+}
 
+@media only screen and (max-width: 1100px) {
+    .panel .text > h1 {
+        font-size: 32px;
+    }
+}
+
+/* for small screens */
 @media only screen and (max-width: 600px) {
     .panel {
         flex-direction: column;
