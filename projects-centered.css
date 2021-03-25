@@ -58,6 +58,7 @@
 .panel .text > h1 {
     font-size: 52px;
     margin: 0;
+    text-align: center;
 }
 
 .panel .text > p {
@@ -81,6 +82,10 @@
     transition: color 0.2s, text-decoration-color 0.2s;
 }
 
+.reversed .read-more {
+    right: calc(50px + 50vw);
+}
+
 .read-more:hover {
     cursor: pointer;
     color: var(--ami-orange);
@@ -89,12 +94,6 @@
 
 .reversed {
     flex-direction: row-reverse;
-}
-.reversed .text > h1 {
-    text-align: right;
-}
-.reversed .read-more {
-    left: 50px;
 }
 
 /* using instead of min/max/clamp bc only supported on chrome */
@@ -124,15 +123,12 @@
         min-width: 100%;
         height: 250px;
     }
-    .reversed .text > h1 {
-        text-align: left;
+    .read-more {
+        font-size: 16px;
     }
     .reversed .read-more {
         left: auto;
         right: 50px;
-    }
-    .read-more {
-        font-size: 16px;
     }
     .panel .text > p {
         font-size: 16px;
